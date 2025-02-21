@@ -11,7 +11,7 @@ cp "$VIMRC_SOURCE" "$VIMRC_DEST"
 
 # Install Vundle
 if [ ! -d "$VUNDLE_DIR" ]; then
-    echo "Installing Vundle..."
+    echo "Installing Vundle"
     git clone https://github.com/VundleVim/Vundle.vim.git "$VUNDLE_DIR"
 fi
 
