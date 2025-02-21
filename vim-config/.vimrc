@@ -8,6 +8,9 @@ call vundle#begin()
 " Plugin list
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'itchyny/lightline.vim'
+
+set laststatus=2
 
 call vundle#end()            " Required
 filetype plugin indent on    " Required

@@ -1,21 +1,22 @@
 #!/bin/bash
 
-VUNDLE_DIR="$HOME/.vim/bundle/Vundle.vim"
+# Define paths
 VIMRC_SOURCE="$(pwd)/vim-config/.vimrc"
 VIMRC_DEST="$HOME/.vimrc"
+VUNDLE_DIR="$HOME/.vim/bundle/Vundle.vim"
 
 # Copy .vimrc to home directory
 echo "Copying .vimrc to $HOME"
 cp "$VIMRC_SOURCE" "$VIMRC_DEST"
 
-# Install Vundle if not installed
+# Install Vundle
 if [ ! -d "$VUNDLE_DIR" ]; then
-    echo "Installing Vundle"
+    echo "Installing Vundle..."
     git clone https://github.com/VundleVim/Vundle.vim.git "$VUNDLE_DIR"
 fi
 
-# Install plugins
-echo "Installing Vim plugins"
+# Install Vim plugin
+echo "Installing Vim plugin"
 vim +PluginInstall +qall
 
-echo "Setup complete!"
+echo "Vim setup complete!"
